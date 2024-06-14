@@ -8,26 +8,18 @@ function NavBar() {
     
     <nav>
       <NavLink
-        to="/"
-        /* add styling to Navlink */
-        className="nav-Home"
-      ><div className="navbar">
-        Home
-        </div>
+       to="/" className="navbar">
+       Home
       </NavLink>
       <NavLink
         to="/directors"
-        className="nav-directors"
-      ><div className="navbar">
-        Directors
-        </div>
+        className="navbar"
+      > Directors
       </NavLink>
       <NavLink
         to="/actors"
-        className="nav-actors"
-      > <div className="navbar">
-        Actors
-        </div>
+        className="navbar"
+      >Actors
       </NavLink>
     </nav>
   );

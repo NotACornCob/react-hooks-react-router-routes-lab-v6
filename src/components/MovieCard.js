@@ -1,12 +1,13 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
-function MovieCard({title}) {
+
+function MovieCard({title, time, genres, id}) {
   
   return (
     <article>
-        <h2>{title}</h2>
-        {/* What should go here? */}
+        <h3><Link to={`/Movie/${id}`}>{title}</Link></h3>
     </article>
   );
 };

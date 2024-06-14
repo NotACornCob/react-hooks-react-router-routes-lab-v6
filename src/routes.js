@@ -19,8 +19,7 @@ const routes = [
         element: <Directors />
     },
     {
-        path: "/Movie",
-        url: "/id",
+        path: "/Movie/:id",
         element: <Movie />
     }
   ];

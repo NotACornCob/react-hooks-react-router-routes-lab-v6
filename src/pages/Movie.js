@@ -1,26 +1,21 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import MovieCard from "../components/MovieCard"
+import NavBar from "../components/NavBar";
+import { useParams } from "react-router-dom";
 
-function Movie() {
 
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() =>{
-    fetch("http://localhost:4000/")
-      .then(r => r.json())
-      .then(data => setMovies(data))
-      .catch(error => console.error(error))
-  }, [])
-
-  console.log(movies)
-
+function Movie({id, title, time, genres}) {
+console.log(title)
+console.log(id)
   return (
     <>
       <header>
-        < MovieCard />
+      <div className="navbar">
+        <NavBar />
+        </div>
       </header>
       <main> 
-        {/* Movie info here! */}
+      < MovieCard id={id} title={title} time={time} genres={genres}/>
       </main>
     </>
   );
