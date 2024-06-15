@@ -5,20 +5,23 @@ import { useParams } from "react-router-dom";
 
 
 function Movie() {
-  const [movies, setMovies] = useState([]);
+  const [movie, setMovie] = useState({});
   const params = useParams();
+  const movieSelection = params.id
+  const movieGenres = [movie.genres]
   console.log(params)
 
   useEffect(() =>{
-    fetch(`http://localhost:4000/movies`)
+    fetch(`http://localhost:4000/movies/${movieSelection}`)
       .then(r => r.json())
-      .then(data => setMovies(data))
+      .then(data => setMovie(data))
       .catch(error => console.error(error))
-  }, [])
+  }, [movieSelection])
+console.log(movie.title)
+console.log(movie.genres)
 
-  const movieList = movies.map(movie =>{
-    return < MovieCard key={movie.id} id={movie.id} title={movie.title} genres={movie.genres} time={movie.time} />
-  })
+const genreArray = movieGenres.map(genre =>{
+  return <span>[{genre}]</span>  })
 
   return (
     <>
@@ -28,7 +31,9 @@ function Movie() {
         </div>
       </header>
       <main> 
-      {movieList}
+        <h1>{movie.title}</h1>
+        <p>{movie.time}</p>
+        {genreArray}
       </main>
     </>
   );
