@@ -1,5 +1,4 @@
 import React from "react";
-import Home from "../pages/Home"
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
@@ -8,8 +7,8 @@ function NavBar() {
     
     <nav>
       <NavLink
-       to="/" className="navbar">
-       Home
+       to="/" className="navbar"
+      > Home
       </NavLink>
       <NavLink
         to="/directors"
@@ -19,7 +18,7 @@ function NavBar() {
       <NavLink
         to="/actors"
         className="navbar"
-      >Actors
+      > Actors
       </NavLink>
     </nav>
   );

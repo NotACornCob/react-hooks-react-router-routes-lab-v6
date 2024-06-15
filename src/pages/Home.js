@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar"
-import Movie from "./Movie"
 import MovieCard from "../components/MovieCard"
+
 
 function Home() {
 
@@ -19,7 +19,7 @@ function Home() {
   })
 
   return (
-    <h1>
+    <>
       <header>
         <div className="navbar">
         <NavBar />
@@ -27,11 +27,9 @@ function Home() {
       </header>
       <main>
       <h1>Home Page</h1>
-      <div>
      {movieList}
-      </div>
       </main>
-    </h1>
+      </>
   );
 };
 
