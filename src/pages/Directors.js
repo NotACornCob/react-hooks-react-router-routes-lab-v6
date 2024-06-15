@@ -22,12 +22,12 @@ useEffect(() =>{
       </header>
       <main>
       <h1>Directors Page</h1>
-        {directors.map((director) => (
-        <article key={director.index}>
+        {directors.map((director, index) => (
+        <article key={index}>
           <h2>{director.name}</h2>
-          <ul>
-            {director.movies.map((movie) => (
-              <li>{movie}</li>
+          <ul key={index}>
+            {director.movies.map((movie, index) => (
+              <li key={index}>{movie}</li>
             ))}
             </ul>
         </article>))}

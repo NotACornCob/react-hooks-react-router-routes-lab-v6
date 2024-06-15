@@ -10,7 +10,6 @@ function Actors() {
       .then(data => setActors(data))
       .catch(error => console.error(error))
   }, [])
-  console.log(actors)
 
   return (
     <div>
@@ -21,12 +20,12 @@ function Actors() {
       </header>
       <main>
         <h1>Actors Page</h1>
-        {actors.map((actor) => (
-          <article key={actor.index}>
+        {actors.map((actor, index) => (
+          <article key={index}>
             <h2>{actor.name}</h2>
-          <ul>
-            {actor.movies.map((movie) => (
-              <li>{movie}</li>
+          <ul key={index}>
+            {actor.movies.map((movie, index) => (
+              <li key={index}>{movie}</li>
             ))}
           </ul>
           </article>
