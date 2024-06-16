@@ -13,7 +13,7 @@ function Movie() {
       .then(r => r.json())
       .then(data => setMovie(data))
       .catch(error => console.error(error))
-  }, [movieSelection])
+  }, [movieSelection]) 
   
   return (
     <>
