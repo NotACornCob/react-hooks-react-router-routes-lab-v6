@@ -1,9 +1,9 @@
 import "./index.css";
 import Home from "./pages/Home";
-import Actors from "./pages/Actors"
-import Directors from "./pages/Directors"
-import Movie from "./pages/Movie"
-import ErrorPage from "./pages/ErrorPage"
+import Actors from "./pages/Actors";
+import Directors from "./pages/Directors";
+import Movie from "./pages/Movie";
+import ErrorPage from "./pages/ErrorPage";
 
 
 const routes = [
@@ -26,10 +26,6 @@ const routes = [
         path: "/movie/:id",
         element: <Movie />,
         errorElement: <ErrorPage />
-    },
-    {
-        path: "/bad-route",
-        element: <ErrorPage />
     }
   ];
 
